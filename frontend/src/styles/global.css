@@ -1,0 +1,141 @@
+:root {
+  --accent: #0f1de1; /* blue-600 */
+  --accent-hover: #0c2ce2;
+  --bg: #e0e4c7; /* slate-100 */
+  --card: #ffffff;
+  --text: #0f172a; /* slate-900 */
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(6, 231, 59, 0.805);
+  padding: 28px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+h1,h2,h3 {
+  margin: 0 0 16px;
+  font-weight: 600;
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; color: var(--accent); }
+h3 { font-size: 1.2rem; }
+
+label {
+  font-size: 14px;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 6px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 15px;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.2);
+}
+
+button {
+  padding: 12px 20px;
+  border: 0;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+.btn {
+  background: linear-gradient(135deg, var(--accent), );
+  color: #0f172a;
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, var(--accent-hover), );
+}
+
+.btn.secondary {
+  background: #f1f5f9;
+  color: #475569;
+}
+.btn.secondary:hover {
+  background: #01193975;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.col-6 { grid-column: span 6; }
+.col-12 { grid-column: span 12; }
+
+.badge {
+  background: #e0f2fe;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  color: #0369a1;
+  font-weight: 500;
+}
+
+.section {
+  border-top: 1px dashed #e2e8f0;
+  padding-top: 16px;
+  margin-top: 20px;
+}
+
+.list {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.small {
+  font-size: 13px;
+  color: #475569;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
